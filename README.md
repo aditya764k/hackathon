@@ -4,7 +4,7 @@ AI-Powered Healthcare Claim Denial Prevention System
 
 ## **📌 Overview**
 
-ClaimShield AI is an intelligent healthcare claim analysis system that predicts insurance claim denials before submission.
+ClaimShield AI is an intelligent medical claim auditing platform that uses AI to predict claim approval likelihood, extract medical codes from clinical notes, and generate compliant billing documentation in real-time.
 
 The platform combines:
 
@@ -52,43 +52,56 @@ ClaimShield AI analyzes claims before they are submitted and provides:
 
 ## ⚙️ Workflow
 
-Upload Clinical Document → OCR Code Extraction → Medical Billing Rule Engine → Machine Learning Prediction → Risk Classification → 
-Remediation Suggestions → Claim History Storage
+ Medical Note Upload → AI OCR → Code Extraction → Rules Engine → Confidence Scoring → Export Ready
 
-## ⭐ Key Features
+## Core Features
 
-📄 Clinical Document Processing
+1. Medical Note Analysis
 
-Extracts structured information from uploaded medical documents.
+    * OCR processing of handwritten or typed clinical notes
+      
+    * Smart validation to reject non-medical documents
+      
+    * ICD‑10 diagnosis code extraction
+      
+    * CPT procedure code detection
+      
+    * AI-based confidence scoring
+  
+2. Claim Management
+      
+    * Real-time analytics dashboard
+      
+    * Claims history with search and filtering
+      
+    * Confidence level categorization
+      
+    * Claim approval/denial status tracking
+      
+3. Professional Export System
+   
+    * Medical superbill generation
+      
+    * EDI 837P ANSI X12 export files
+      
+    * ZIP download containing all billing documents
+      
+    * HIPAA-compliant workflow
+  
+4. Professional UI/UX
+   
+    * Dark mode healthcare dashboard
+      
+    * Responsive design
+      
+    * Accessibility compliance
+      
+    * Real-time updates
 
-🤖 AI Denial Prediction
-
-Predicts the probability of claim denial using machine learning.
-
-⚖️ Billing Compliance Validation
-
-Detects invalid combinations of diagnosis and procedure codes.
-
-🛡️ Remediation Recommendations
-
-Suggests corrective actions to reduce denial risk.
-
-📊 Claim History Tracking
-
-Maintains records of analyzed claims for auditing and analytics.
 
 ## 🧰 Tech Stack
 
-<p>
-
-<img src="https://img.shields.io/badge/Python-Backend-blue?style=for-the-badge&logo=python">
-<img src="https://img.shields.io/badge/FastAPI-API-green?style=for-the-badge&logo=fastapi">
-<img src="https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge&logo=streamlit">
-<img src="https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikit-learn">
-<img src="https://img.shields.io/badge/Pandas-Data%20Processing-purple?style=for-the-badge&logo=pandas">
-<img src="https://img.shields.io/badge/SQLite-Database-blue?style=for-the-badge&logo=sqlite">
-
-</p>
+<p align="center"> <img src="https://img.shields.io/badge/Next.js-Frontend-black?style=for-the-badge&logo=next.js"> <img src="https://img.shields.io/badge/React-UI-blue?style=for-the-badge&logo=react"> <img src="https://img.shields.io/badge/TypeScript-Language-blue?style=for-the-badge&logo=typescript"> <img src="https://img.shields.io/badge/TailwindCSS-Styling-38B2AC?style=for-the-badge&logo=tailwind-css"> <img src="https://img.shields.io/badge/Shadcn-UI%20Components-black?style=for-the-badge"> <img src="https://img.shields.io/badge/PostCSS-Styling-DD3A0A?style=for-the-badge&logo=postcss"> <img src="https://img.shields.io/badge/Node.js-Backend-green?style=for-the-badge&logo=node.js"> </p>
 
 ## 📂 Project Structure
 
@@ -264,21 +277,27 @@ Maintains records of analyzed claims for auditing and analytics.
 
 ## 🚀 API Endpoints
 
-1.Predict Claim Risk - 
-POST /predict
+1. Predict Claim Risk - 
+POST /api/predict
 
-   Returns denial probability and remediation suggestions.
+Returns:
 
-2.Full AI Pipeline - 
-POST /full_pipeline
+Denial probability
 
-   Processes uploaded clinical documents through:
+Predicted claim status
 
-- OCR extraction
+Remediation suggestion
 
-- Rule validation
+2. Full AI Pipeline -
+POST /api/full-pipeline
 
-- ML prediction
+Processes uploaded clinical documents through:
+
+OCR extraction
+
+Rule validation
+
+Machine learning prediction
 
 ## 📊 Example Output
 
